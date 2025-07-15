@@ -18,6 +18,7 @@ export default function Search({ placeholder }: { placeholder: string }) {
       } else {
         params.delete('query');
       }    
+      //更新浏览器的 URL 地址栏内容（查询参数）
       replace(`${pathname}?${params.toString()}`);      
   }, 300);
   return (
